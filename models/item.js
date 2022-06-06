@@ -1,27 +1,9 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const ItemSchema = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
-    description: {
-        type: String,
-        required: true
-    },
-    category:{
-        type: String,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
-    },
-    date_added: {
-        type: Date,
-        default: Date.now
-    },
-});
+// Ensure that the Category model is loaded in Mongoose
+require('./category');
 
-module.exports = Item = mongoose.model('item',ItemSchema);
+// We want to re-use the itemSchema
+const itemSchema = require('./itemSchema');
+
+module.exports = mongoose.model('Item', itemSchema);
