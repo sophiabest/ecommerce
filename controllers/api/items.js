@@ -52,8 +52,8 @@ async function search(req, res) {
       if (res.ok) return res.json()
       throw new Error('bad call')
     })
-    .then(books => {
-      res.json(books)
+    .then(items => {
+      res.json(items)
     })
     .catch(err => {
       res.status(400).json(err);
