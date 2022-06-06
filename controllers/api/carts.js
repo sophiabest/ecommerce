@@ -1,5 +1,5 @@
-const Cart = require('../models/cart');
-const Item = require('../models/item');
+const Cart = require('../../models/cart');
+const Item = require('../../models/item');
 
 module.exports.get_cart_items = async (req,res) => {
     const userId = req.params.id;
