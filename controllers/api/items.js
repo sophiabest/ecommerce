@@ -46,7 +46,7 @@ async function addItem(req, res) {
 
 async function search(req, res) {
   const response = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=${req.body.query}&printType=books&key=${API_KEY}`
+    ``
   )
     .then(res => {
       if (res.ok) return res.json()
