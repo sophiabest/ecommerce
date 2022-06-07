@@ -1,0 +1,16 @@
+.OrderList {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 5vmin;
+    align-items: center;
+    margin: 3vmin 0;
+    padding: 3vmin;
+    overflow-y: scroll;
+}
+  
+.OrderList .no-orders {
+    color: var(--dark-blue);
+    font-size: 2vmin;
+    text-align: center;
+    top: calc(50vh);
+}

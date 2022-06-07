@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #031d44;
+    color: #fff;
+    gap: 1em;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.logo-img {
+    width: 15vh;
+}
+
+.nav-links {
+    background-color: #031d44;
+    color: white;
+    width: 30vh;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    background-color: #70a288;
+    border-radius: 2px;
+    color: #031d44;
+}

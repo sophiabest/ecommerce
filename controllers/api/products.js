@@ -1,7 +1,6 @@
 const Product = require('../../models/product');
-var fetch = require("node-fetch");
+// var fetch = require("node-fetch");
 const product = require('../../models/productSchema');
-
 
 module.exports = {
   addProduct,
@@ -17,7 +16,7 @@ async function deleteListings(req, res) {
 }
 
 async function updateListings(req, res) {
-  const product = await Product.findByIdAndUpdate(req.body.id, req.body.book, { new: true });
+  const product = await Product.findByIdAndUpdate(req.body.id, req.body.product, { new: true });
   res.json(product);
 }
 
@@ -25,7 +24,6 @@ async function getListings(req, res) {
   const products = await Product.find({ user: req.user._id }).exec();
   res.json(products);
 }
-
 
 async function index(req, res) {
   const products = await Product.find({}).exec();
@@ -37,7 +35,6 @@ async function addProduct(req, res) {
     req.body.user = req.user._id;
     const product = await Product.create(req.body.volumeInfo);
     res.json(product);
-
   } catch (err) {
     res.status(400).json(err);
   }

@@ -5,8 +5,8 @@ const productsCtrl = require('../../controllers/api/products');
 
 router.use(ensureLoggedIn);
 
-router.post('/search', productsCtrl.search);
-router.post('/add', productsCtrl.addBook);
+// router.post('/search', productsCtrl.search);
+router.post('/add', productsCtrl.addProduct);
 router.get('/', productsCtrl.index);
 router.get('/listings', productsCtrl.getListings);
 router.put('/edit', productsCtrl.updateListings);

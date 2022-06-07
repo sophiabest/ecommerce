@@ -1,0 +1,40 @@
+.home-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 12vh;
+}
+
+.home-img {
+    width: 70vh;
+}
+
+.welcome {
+    font-weight: 700;
+    font-size: 60px;
+}
+  
+.welcome-question {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.home-link-container {
+    padding-top: 5vh;
+}
+
+.home-links {
+    background-color: #031d44;
+    color: white;
+    width: 35vh;
+    font-size: 20px;
+    padding: 1em 1.5em;
+    margin: 2em;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.home-links:hover {
+    background-color: #70a288;
+    border-radius: 2px;
+    color: #031d44;
+}

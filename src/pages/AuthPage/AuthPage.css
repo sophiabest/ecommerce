@@ -1,0 +1,26 @@
+.authPage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.auth-img {
+    width: 70vh;
+}
+
+h1 {
+    font-weight: 700;
+    padding-top: 30vmin;
+    font-size: 60px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+button {
+    background-color: var(--green);
+    border-radius: 3px;
+    font-size: 20px;
+}
+

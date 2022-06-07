@@ -1,24 +1,27 @@
+import './NavBar.css';
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 
 export default function NavBar({ user, setUser }) {
-
   function handleLogOut() {
-    // Remove token using the user service
     userService.logOut();
-    // Update user state in App
     setUser(null);
   }
 
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
-      &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
-      &nbsp; | &nbsp;
-      <span>Welcome, {user.name}</span>
-      &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogOut}>Log Out</Link>
+      {/* <img className="logo-img" src={process.env.PUBLIC_URL + "put image name here"} /> */}
+      <span>Welcome, {user.name}!</span>
+      &nbsp;  &nbsp;
+      <Link className="nav-links" to="/sell">Sell Products</Link>
+      &nbsp;  &nbsp;
+      <Link className="nav-links" to="/buy">Search Available Products</Link>
+      &nbsp;  &nbsp;
+      <Link className="nav-links" to="/listings">My Listings</Link>
+      &nbsp;  &nbsp;
+      <Link className="nav-links" to="/orders">My Orders</Link>
+      &nbsp;  &nbsp;
+      <Link className="nav-links" onClick={handleLogOut} to="">Log Out</Link>
     </nav>
   );
 }

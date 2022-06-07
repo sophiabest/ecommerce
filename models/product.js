@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
 
-const bookSchema = require('./bookSchema');
+const productSchema = require('./productSchema');
 
-module.exports = mongoose.model('Book', bookSchema);
+module.exports = mongoose.model('Product', productSchema);

@@ -1,0 +1,33 @@
+.OrderDetail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vmin;
+    font-size: 1vmin;
+    color: var(--text-light);
+}
+  
+.OrderDetail .section-heading {
+    width: 100%
+}
+  
+.OrderDetail .line-item-container {
+    margin-top: 3vmin;
+    justify-content: flex-start;
+    width: 100%;
+}
+  
+.OrderDetail .total {
+    width: 100%;
+    padding: 1vmin 0;
+    color: var(--text-dark);
+}
+  
+.OrderDetail .total h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmin;
+    color: var(--text-dark);
+    font-weight: bolder;
+}

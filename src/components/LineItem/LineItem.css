@@ -1,0 +1,20 @@
+.LineItem {
+    width: 100%;
+    color: var(--dark-blue);
+    font-size: 2vmin;
+  }
+    
+  .LineItem .qty {
+    align-items: center;
+    font-size: 2vmin;
+    font-weight: bolder;
+  }
+    
+  .LineItem .ext-price {
+    align-items: center;
+    font-size: 2vmin;
+  }
+    
+  .LineItem button {
+    margin: 0;
+  }
