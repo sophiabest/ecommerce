@@ -47,10 +47,8 @@ export default function ListingCard({
       />
       <h6 className="card-title">Title:</h6>
       <p name="title">{product.title}</p>
-      <h6 className="card-title">Author(s):</h6>
-      <p name="authors">{product.authors}</p>
-      <h6 className="card-title">Published Date:</h6>
-      <p name="published">{product.publishedDate}</p>
+      <h6 className="card-title">Seller(s):</h6>
+      <p name="sellers">{product.sellers}</p>
       <h6 className="card-title">Average Rating:</h6>
       <p name="averageRating">{product.averageRating}</p>
       <h6 className="card-title">Category:</h6>

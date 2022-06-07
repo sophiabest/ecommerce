@@ -38,9 +38,7 @@ export default function ProductCard({ user, product, addProduct }) {
       <h6 className="card-title">Title:</h6>
       <p name="title">{product.volumeInfo.title}</p>
       <h6 className="card-title">Author(s):</h6>
-      <p name="authors">{product.volumeInfo.authors}</p>
-      <h6 className="card-title">Published Date:</h6>
-      <p name="published">{product.volumeInfo.publishedDate}</p>
+      <p name="sellers">{product.volumeInfo.sellers}</p>
       <h6 className="card-title">Average Rating:</h6>
       <p name="averageRating">{product.volumeInfo.averageRating}</p>
       <h6 className="card-title">Category:</h6>
