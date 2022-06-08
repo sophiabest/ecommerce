@@ -1,5 +1,6 @@
 const Product = require('../../models/product');
 const product = require('../../models/productSchema');
+var fetch = require("node-fetch");
 
 
 module.exports = {
@@ -38,7 +39,7 @@ async function addProduct(req, res) {
 
 async function search(req, res) {
   const response = await fetch(
-    `${req.body.query}${API_KEY}`
+    `https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&q=${req.body.query}&sizeSchema=US&lang=en-US`, options
   )
     .then(res => {
       if (res.ok) return res.json()
