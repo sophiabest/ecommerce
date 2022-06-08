@@ -40,3 +40,18 @@ async function addProduct(req, res) {
   }
 }
 
+async function search(req, res) {
+  const response = await fetch(
+    `'https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US', options`
+  )
+    .then(res => {
+      if (res.ok) return res.json()
+      throw new Error('bad call')
+    })
+    .then(products => {
+      res.json(products)
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
+};

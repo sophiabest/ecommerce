@@ -25,7 +25,7 @@ export default function SellProductsPage({ user }) {
       <div>
         <h3>Please follow the instructions below to list a product for sale.</h3>
         <br />
-        <h6>1. Search for your product using the search bar below by entering the product's title or ISBN#.</h6>
+        <h6>1. Search for your product using the search bar below by entering the product's name.</h6>
         <br />
         <h6>2. Once you find your product, enter the price and condition.</h6>
         <br />
