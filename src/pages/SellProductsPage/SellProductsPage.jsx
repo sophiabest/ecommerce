@@ -8,7 +8,6 @@ export default function SellProductsPage({ user }) {
   const [query, setQuery] = useState('');
   const [products, setProducts] = useState({ items: [] });
 
-
   async function handleGetProducts(query) {
     const product = await productsAPI.search(query);
     setProducts(product)

@@ -3,6 +3,7 @@ const product = require('../../models/productSchema');
 
 
 module.exports = {
+  search,
   addProduct,
   index,
   getListings,
@@ -35,3 +36,18 @@ async function addProduct(req, res) {
   res.json(newProduct);
 }
 
+async function search(req, res) {
+  const response = await fetch(
+    `${req.body.query}${API_KEY}`
+  )
+    .then(res => {
+      if (res.ok) return res.json()
+      throw new Error('bad call')
+    })
+    .then(products => {
+      res.json(products)
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
+};
