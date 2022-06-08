@@ -1,12 +1,11 @@
 const Schema = require('mongoose').Schema;
 
 const productSchema = new Schema({
-    user: { type: Schema.Types.ObjectId, ref: 'User'},
-    imageLinks: {thumbnail: {type: String, default: "Unavailiable"}},
+    seller: { type: Schema.Types.ObjectId, ref: 'Seller'},
+    imageLinks: [String],
     title: {type: String},
-    seller: [],
     averageRating: {type:Number, default: 0},
-    categories: [],
+    categories: [String],
     description: { type: String, default: 'Unavailiable'},
     condition: {type: String, default: 'Unavailiable'},
     price: {type: Number, default: 0},

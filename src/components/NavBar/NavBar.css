@@ -3,7 +3,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #031d44;
+    background-color: pink;
     color: #fff;
     gap: 1em;
     font-size: 20px;
@@ -15,7 +15,7 @@ nav {
 }
 
 .nav-links {
-    background-color: #031d44;
+    background-color: pink;
     color: white;
     width: 30vh;
     font-size: 20px;
@@ -25,5 +25,5 @@ nav {
 .nav-links:hover {
     background-color: #70a288;
     border-radius: 2px;
-    color: #031d44;
+    color: pink;
 }
