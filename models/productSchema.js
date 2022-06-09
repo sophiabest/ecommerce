@@ -1,16 +1,15 @@
 const Schema = require('mongoose').Schema;
 
 const productSchema = new Schema({
-    seller: { type: Schema.Types.ObjectId, ref: 'Seller'},
-    imageLinks: [String],
-    title: {type: String},
-    averageRating: {type:Number, default: 0},
-    categories: [String],
-    description: { type: String, default: 'Unavailiable'},
-    condition: {type: String, default: 'Unavailiable'},
-    price: {type: Number, default: 0},
-}, { timestamps: true });
-
-
+  name: { type: String, required: true },
+  img: String,
+  category: { type: Schema.Types.ObjectId, ref: 'Category' },
+  brand: { type: Schema.Types.ObjectId, ref: 'Brand' },
+  price: { type: Number, required: true, default: 0 },
+  size: { type: String, required: false, default: 'N/A'},
+  description: String
+}, {
+  timestamps: true
+});
 
 module.exports = productSchema;

@@ -1,29 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 nav {
+    background-color: white;
+}
+
+.user-welcome-container {
+    height: 3vh;
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+
+#nav-username {
+    font-weight: 900px;
+}
+
+.user-welcome {
+    margin-top: 1vh;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 5.5vw 0vh 5.5vw;
+    text-decoration: none;
+    font-size: 1.4vw;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: pink;
-    color: #fff;
-    gap: 1em;
-    font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 2.4vw;
+    font-weight: 400;
+    font-family: 'M PLUS 1', sans-serif;
+    letter-spacing: .1vw;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
-.logo-img {
-    width: 15vh;
+#logo-icon {
+    font-size: 3.4vw;
+    font-weight: 400;
+    margin: 0vmin .3vmin 0vmin .3vmin;
 }
 
-.nav-links {
-    background-color: pink;
-    color: white;
-    width: 30vh;
-    font-size: 20px;
+.nav-orderhistory {
+    font-size: 1.2vw;
     text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-right: 3.5vw;
 }
 
-.nav-links:hover {
-    background-color: #70a288;
-    border-radius: 2px;
-    color: pink;
+.nav-orderhistory:hover {
+    font-weight: 700;
+}
+
+.navlink-container {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.logout {
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.logout:hover {
+    font-weight: 700;
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+    
+.grow:hover { 
+    transform: scale(1.1); 
 }

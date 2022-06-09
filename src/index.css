@@ -1,11 +1,14 @@
+/* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
+  --white-2: #fcfcf8;
   --tan-1: #FBF9F6;
-  --dark-blue: #031d44;
-  --mid-blue: #04395e;
-  --green: #70a288;
-  --yellow-tan: #dab785;
-  --peach: #d5896f;
+  --tan-2: #E7E2DD;
+  --tan-3: #E2D9D1;
+  --tan-4: #D3C1AE;
+  --black: #000000;
+  --grey-1: #dfdfdf;
+  --grey-2: #838383;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -16,20 +19,19 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-1);
+  background-color: var(--white);
+  padding: 2vmin;
   height: 100vh;
 }
 
-h1 {
-  color: var(--dark-blue);
-}
-
 code {
-  font-family: 'Quicksand', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 #root {
@@ -51,9 +53,7 @@ code {
 .flex-ctr-ctr {
   display: flex;
   justify-content: center;
-  color: var(--dark-blue);
   align-items: center;
-  font-size: 2vmin;
 }
 
 .flex-col {
@@ -72,58 +72,101 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: var(--dark-blue);
+  background-color: var(--tan-1);
+  color: var(--text-dark);
+  border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
-  font-size: 3vmin;
+  font-size: 2vmin;
+}
+
+.form-container {
+  padding: 3vmin;
+  background-color: var(--white);
+  border: .1vmin solid var(--black);
+  border-radius: 2px;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--black);
   text-align: center;
 }
 
+form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.25vmin;
+  color: var(--black);
+}
+
 label {
-  font-size: 2vmin;
+  font-size: 1.6vmin;
   display: flex;
   align-items: center;
 }
 
 input {
   padding: 1vmin;
-  width: 50vh;
-  font-size: 2vmin;
-  border: .1vmin solid var( --yellow-tan);
-  border-radius: .5vmin;
+  font-size: 1.5vmin;
+  border: .1vmin solid var(--black);
+  border-radius: 2px;
   color: var(--text-dark);
-  background-image: none !important;
+  background-image: none !important; /* prevent lastpass */
   outline: none;
-} 
+}
 
 input:focus {
-  border-color: var(--peach);
-} 
+  border-color: var(--black);
+}
+
+button, a.button {
+  margin: 1vmin;
+  padding: 1vmin;
+  width: 10vw;
+  color: black;
+  background-color: white;
+  font-size: 1.5vmin;
+  text-decoration: none;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  font-weight: 700;
+}
 
 button.btn-sm {
-  font-size: 2vmin;
+  font-size: 1.5vmin;
   padding: .6vmin .8vmin;
 }
 
 button.btn-xs {
-  font-size: 2vmin;
+  font-size: 1vmin;
   padding: .4vmin .5vmin;
 }
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  border-radius: 3px;
-  background-color: var( --tan-1);
+  color: var(--grey-2);
+  background-color: white;
+  border-top: 1px solid var(--grey-2);
+  border-bottom: 1px solid var(--grey-2);
 }
 
 button[type="submit"] {
-  border-radius: 3px;
-  background-color: var( --green);
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+.submit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }

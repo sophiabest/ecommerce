@@ -1,23 +1,17 @@
-import OrderListItem from '../OrderListItem/OrderListItem';
 import './OrderList.css';
+import OrderListProduct from '../OrderListProduct/OrderListProduct';
 
-export default function OrderList({ orders, activeOrder, handleSelectOrder }) {
-  const orderItems = orders.map(o =>
-    <OrderListItem
-      order={o}
-      isSelected={o === activeOrder}
-      handleSelectOrder={handleSelectOrder}
-      key={o._id}
+export default function OrderList({ orderProducts, handleShowOrder }) {
+  const products = orderProducts.map(order =>
+    <OrderListProduct
+      key={order._id}
+      orderProduct={order}
+      handleShowOrder={handleShowOrder}
     />
   );
-
   return (
     <main className="OrderList">
-      {orderItems.length ?
-        orderItems
-        :
-        <span className="no-orders">No Previous Orders</span>
-      }
+      {products}
     </main>
   );
 }

@@ -1,0 +1,114 @@
+.MenuListProduct {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vmin;
+    padding: 2.5vmin;
+    color: var(--black);
+    background-color: var(--white);
+    border: .1vmin solid var(--black);
+    border-radius: 2px;
+    font-size: 4vmin;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.MenuListProduct:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+  
+.MenuListProduct .img {
+    height: 50px;
+}
+  
+.MenuListProduct .buy {
+    display: flex;
+    flex-direction: column;
+}
+  
+.MenuListProduct .buy span {
+    font-size: 1.7vw;
+    text-align: center;
+    color: var(--black);
+}
+  
+.MenuListProduct .name {
+    font-size: 1.5vw;
+    text-align: center;
+    color: var(--black);
+}
+
+#buy-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5vh 1.3vh 0vh 1.3vh;
+    background-color: white;
+    color: black;
+    font-size: 1.8vw;
+    border: none;
+    border-radius: 0px;
+}
+
+#buy-button:hover {
+    border-bottom: 0.3vh solid rgb(2, 148, 2);
+    border-radius: 0px;
+}
+
+#details-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(80, 79, 79);
+    background-color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1vmin;
+    width: 11vw;
+    height: 2vh;
+    margin-top: 1.4vh;
+    border: 1px solid rgb(80, 79, 79);
+    border-radius: 2px;
+}
+
+#details-button:hover {
+    color: white;
+    background-color: rgb(80, 79, 79);
+    border: 1px solid rgb(80, 79, 79);
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 15.5vw;
+    font-weight: 500;
+}
+
+#add-to-cart {
+    font-size: .8vw;
+    margin-top: 0.4vh;
+}
+
+.product-img {
+    height: 11vmin;
+    width: 11vmin;
+}
+
+.img-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover { 
+    transform: scale(1.1); 
+}

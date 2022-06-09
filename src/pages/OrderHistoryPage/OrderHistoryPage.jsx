@@ -1,43 +1,50 @@
 import './OrderHistoryPage.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import OrderList from '../../components/OrderList/OrderList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 
-export default function OrderHistoryPage({ user, setUser }) {
-  /*--- State --- */
-  const [orders, setOrders] = useState([]);
-  const [activeOrder, setActiveOrder] = useState(null);
+function OrderHistoryPage({ user }) {
+    const [orderProducts, setOrderProducts] = useState([]);
+    const [activeOrder, setActiveOrder] = useState(null);
 
-  /*--- Side Effects --- */
-  useEffect(function () {
-    async function fetchOrderHistory() {
-      const orders = await ordersAPI.getOrderHistory();
-      setOrders(orders);
-      setActiveOrder(orders[0] || null);
+    useEffect(function() {
+        async function getOrders() {
+          const orders = await ordersAPI.getOrders();
+          setOrderProducts(orders);
+          setActiveOrder(orders[orders.length - 1]);
+        }
+        getOrders();
+      }, []);
+
+    async function handleShowOrder(order) {
+        setActiveOrder(order);
     }
-    fetchOrderHistory();
-  }, []);
 
-  /*--- Event Handlers --- */
-  function handleSelectOrder(order) {
-    setActiveOrder(order);
-  }
-
-  /*--- Rendered UI --- */
   return (
-    <main className="OrderHistoryPage">
-      <h1 className="order-history">My Order History</h1>
-      <OrderList
-        orders={orders}
-        activeOrder={activeOrder}
-        handleSelectOrder={handleSelectOrder}
-      />
-      <div>
-        <OrderDetail
-          order={activeOrder}
+    <>
+      <header>
+        <Link className='grow' id='back-to-shopping' to="/"><i className="fa-regular fa-angle-left"></i> Back To Shopping</Link>
+      </header>
+        <h1 className='title'>{user.name}'s Order History </h1>
+        {orderProducts.length ? 
+      <main className="OrderHistoryPage">
+      <aside>
+        <OrderList 
+            orderProducts={orderProducts}
+            handleShowOrder={handleShowOrder}
         />
-      </div>
-    </main>
-  );
+      </aside>
+      <OrderDetail 
+        order={activeOrder} 
+      />
+      </main>
+      :
+      <h3 className='order-msg'>No Orders Yet...</h3>
+      }
+    </>
+    );
 }
+
+export default OrderHistoryPage;

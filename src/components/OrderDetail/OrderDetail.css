@@ -1,33 +1,120 @@
 .OrderDetail {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 3vmin;
-    font-size: 1vmin;
-    color: var(--text-light);
+    font-size: 2vmin;
+    color: var(--black);
 }
   
 .OrderDetail .section-heading {
-    width: 100%
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    color: black;
+    background-color: white;
+    font-size: 2.1vmin;
+    font-weight: 500;
+    margin-bottom: 4vh;
+}
+
+.cart-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    color: white;
+    background-color: rgb(238, 0, 0);
+    width: 2vmin;
+    height: 2vmin;
+    font-size: 1vmin;
+    font-weight: 800;
+}
+
+.order-date {
+    font-size: 1.6vw;
 }
   
-.OrderDetail .line-item-container {
+.OrderDetail .line-product-container {
     margin-top: 3vmin;
     justify-content: flex-start;
+    height: calc(100vh - 18vmin);
     width: 100%;
 }
   
 .OrderDetail .total {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 18.35vw 5.75vw 5.25vw;
     padding: 1vmin 0;
-    color: var(--text-dark);
+    color: var(--black);
+    border-top: .1vmin solid var(--black);
 }
   
-.OrderDetail .total h5{
+.OrderDetail .total span {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5vw;
+    color: var(--black);
+}
+  
+.OrderDetail .total span.right {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.OrderDetail .cart-img {
+    position: absolute;
+    top: 50vh;
     font-size: 2vmin;
-    color: var(--text-dark);
-    font-weight: bolder;
+    margin-top: 4vh;
+}
+
+#cart-message {
+    font-size: 1.3vw;
+    margin-bottom: 2vh;
+    color: rgb(122, 122, 122);
+}
+
+.fa-cart-arrow-down {
+    font-size: 5vh;
+}
+
+#checkout-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    border-radius: 2px;
+    color: white;
+    background-color: rgb(80, 79, 79);
+    font-size: 1.3vmin;
+    margin-left: 0px;
+}
+
+#checkout-btn:hover {
+    background-color: black;
+}
+
+.total-container {
+    margin-top: 1vh;
+}
+
+#total-label {
+    margin-bottom: 1vh;
+    font-weight: 700;
+}
+
+.checkout-container {
+    display: flex;
+    align-items: left;
+    margin-top: 2vh;
 }

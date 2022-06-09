@@ -3,23 +3,41 @@ import { useState } from 'react';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import LoginForm from '../../components/LoginForm/LoginForm';
 
-export default function AuthPage({ setUser }) {
-  const [showLogin, setShowLogin] = useState(true);
+function AuthPage({ setUser }) {
+    const [showLogin, setShowLogin] = useState(true);
 
-  return (
-    <main className="authPage">
-      {/* <img className="auth-img" src={process.env.PUBLIC_URL + "HomePage.png"} /> */}
-      <div>
-        <h1>Welcome to buying and selling!</h1>
-        <h3>A marketplace for buying and selling used clothes.</h3>
-        <br />
-        <button onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Sign Up' : 'Log In'}</button>
-        {showLogin ?
-          <LoginForm setUser={setUser} />
-          :
-          <SignUpForm setUser={setUser} />
-        }
-      </div>
-    </main>
-  );
+    return (
+        <>
+            <main className='AuthPage'>
+                <div>
+                    <h4 onClick={() => setShowLogin(!showLogin)}>{showLogin ? 
+                    <div className='auth-aside'>
+                    <h2 className='auth-message-1'>Don't have an account yet?</h2>
+                    <div className='signup-btn grow'>SIGN UP</div>
+                </div>
+                : 
+                <div>
+                    <div className='auth-aside'>
+                    <h2 className='auth-message-1'>Already have an account?</h2>
+                    <div className='login-btn grow'>LOG IN</div>
+                </div>
+                </div>
+                }</h4>
+                </div>
+                {showLogin ?  
+                <div>
+                    <h4 className='auth-message-2'>Please Log In</h4>
+                    <LoginForm setUser={setUser} /> 
+                </div>
+                : 
+                <div>
+                    <h4 className='auth-message-2'>Please create an account to begin shopping</h4>
+                    <SignUpForm setUser={setUser} />
+                </div>
+                }
+            </main>
+        </>
+    )
 }
+
+export default AuthPage;

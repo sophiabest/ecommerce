@@ -2,26 +2,30 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 
-export default function NavBar({ user, setUser }) {
-  function handleLogOut() {
-    userService.logOut();
-    setUser(null);
-  }
+function NavBar({ user, setUser }) {
+    function handleLogOut() {
+      userService.logOut();
+      setUser(null);
+    }
 
-  return (
-    <nav>
-      {/* <img className="logo-img" src={process.env.PUBLIC_URL + "put image name here"} /> */}
-      <span>Welcome, {user.name}!</span>
-      &nbsp;  &nbsp;
-      <Link className="nav-links" to="/sell">Sell Products</Link>
-      &nbsp;  &nbsp;
-      <Link className="nav-links" to="/buy">Search Available Products</Link>
-      &nbsp;  &nbsp;
-      <Link className="nav-links" to="/listings">My Listings</Link>
-      &nbsp;  &nbsp;
-      <Link className="nav-links" to="/orders">My Orders</Link>
-      &nbsp;  &nbsp;
-      <Link className="nav-links" onClick={handleLogOut} to="">Log Out</Link>
-    </nav>
-  );
+    return (
+        <nav>
+          <div className='links-container'>
+            <div id='logo-container'>
+            <div className='logo'>THREADUP<i className="fa-light fa-drum" id='logo-icon'></i></div>
+          </div>
+          <div>
+          </div>
+          <div className='navlink-container'>
+            <Link className='nav-orderhistory grow' to="/orders">Order History &nbsp;<i className="fa-regular fa-list"></i></Link>
+            <Link className="logout grow" to="" onClick={handleLogOut}>Log Out &nbsp;<i className="fa-regular fa-user"></i></Link>
+          </div>
+          </div>
+          <div className='user-welcome-container'>
+            <p className='user-welcome'>Welcome <span id="nav-username">{user.name}</span></p>
+        </div>
+        </nav>
+      );
 }
+
+export default NavBar;

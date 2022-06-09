@@ -1,51 +1,63 @@
 import './OrderDetail.css';
-import LineItem from '../LineItem/LineItem';
+import LineProduct from '../LineProduct/LineProduct';
 
-// Used to display the details of any order, including the cart (unpaid order)
 export default function OrderDetail({ order, handleChangeQty, handleCheckout }) {
-  if (!order) return null;
+    if (!order) return null;
 
-  const lineItems = order.lineItems.map(product =>
-    <LineItem
-      lineItem={product}
-      isPaid={order.isPaid}
-      handleChangeQty={handleChangeQty}
-      key={product._id}
-    />
-  );
-
-  return (
-    <div className="OrderDetail">
-      <div className="section-heading">
-        {order.isPaid ?
-          <span>ORDER <span className="smaller">{order.orderId}</span></span>
-          :
-          <span>NEW ORDER</span>
+    const lineProducts = order.lineProducts.map(product =>
+      <LineProduct
+        lineProduct={product}
+        isPaid={order.isPaid}
+        handleChangeQty={handleChangeQty}
+        key={product._id}
+      />
+    );
+  
+    return (
+      <div className="OrderDetail">
+        <div className="section-heading">
+          {order.isPaid ?
+            <>
+              <span>ORDER <span className="smaller">{order.orderId}</span></span>
+              <span className='order-date'>{new Date(order.updatedAt).toLocaleDateString()}</span>
+            </>
+            :
+            <div className='cart-header'>
+              <span>SHOPPING CART &nbsp;</span>
+              <div className='product-counter'>{order.totalQty}</div>
+            </div>
         }
-        <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
-      </div>
-      <div className="line-item-container flex-ctr-ctr flex-col scroll-y">
-        {lineItems.length ?
-          <>
-            {lineItems}
-            <section className="total">
-              <h5>Products In Cart: {order.totalQty}</h5>
-              <br />
-              <h5 className="right">${order.orderTotal.toFixed(2)}</h5>
-              <br />
-              {order.isPaid ?
-                <span className="right">TOTAL&nbsp;&nbsp;</span>
-                :
-                <button
-                  className="btn-sm"
-                  onClick={handleCheckout}
-                  disabled={!lineItems.length}
-                >CHECKOUT</button>
-              }
-            </section>
-          </>
-          :
-          <div className="empty-cart">Your Cart Is Empty</div>
+        </div>
+        <div className="line-product-container flex-ctr-ctr flex-col scroll-y">
+          {lineProducts.length ?
+            <>
+              {lineProducts}
+              <div className="total">
+                {order.isPaid ?
+                  <div></div>
+                  :
+                  <div>
+                  <div className='total-container'>
+                    </div>
+                        <div className='checkout-container'>
+                            <button
+                            className="btn-sm" id='checkout-btn'
+                            onClick={handleCheckout}
+                            disabled={!lineProducts.length}
+                            >CHECKOUT &nbsp;<i className="far fa-credit-card"></i></button>
+                        </div>
+                  </div>
+                }
+                <div className='total-container'>
+                      <span className="right" id='total-label'>TOTAL&nbsp;&nbsp;</span>
+                    <span className="right">${order.orderTotal.toFixed(2)}</span>
+                    </div>
+              </div>
+            </>
+            :
+            <>
+            <div className="cart-img"><p id='cart-message'>Nothing in cart</p><i className="far fa-cart-arrow-down"></i></div>
+            </>
         }
       </div>
     </div>

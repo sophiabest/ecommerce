@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const productSchema = require('./productSchema');
 
-const lineItemSchema = new Schema({
+const lineProductSchema = new Schema({
   qty: { type: Number, default: 1 },
   product : productSchema,
 }, {
@@ -10,13 +10,13 @@ const lineItemSchema = new Schema({
   toJSON: { virtuals: true }
 });
 
-lineItemSchema.virtual('extPrice').get(function() {
+lineProductSchema.virtual('extPrice').get(function() {
   return this.qty * this.product.price;
 });
 
 const orderSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
-  lineItems: [lineItemSchema],
+  lineProducts: [lineProductSchema],
   isPaid: { type: Boolean, default: false }
 }, {
   timestamps: true,
@@ -24,11 +24,11 @@ const orderSchema = new Schema({
 });
 
 orderSchema.virtual('orderTotal').get(function() {
-  return this.lineItems.reduce((total, product) => total + product.extPrice, 0);
+  return this.lineProducts.reduce((total, product) => total + product.extPrice, 0);
 });
 
 orderSchema.virtual('totalQty').get(function() {
-  return this.lineItems.reduce((total, product) => total + product.qty, 0);
+  return this.lineProducts.reduce((total, product) => total + product.qty, 0);
 });
 
 orderSchema.virtual('orderId').get(function() {
@@ -45,24 +45,24 @@ orderSchema.statics.getCart = function(userId) {
 
 orderSchema.methods.addProductToCart = async function(productId) {
   const cart = this;
-  console.log(cart.lineItems, 'productItem Console');
-  const lineItem = cart.lineItems.find(lineItem => lineItem.product._id.equals(productId));
-  if (lineItem) {
-    lineItem.qty += 1;
+  console.log(cart.lineProducts, 'productProduct Console');
+  const lineProduct = cart.lineProducts.find(lineProduct => lineProduct.product._id.equals(productId));
+  if (lineProduct) {
+    lineProduct.qty += 1;
   } else {
     const product= await mongoose.model('Product').findById(productId);
-    cart.lineItems.push({ product });
+    cart.lineProducts.push({ product });
   }
   return cart.save();
 };
 
-orderSchema.methods.setItemQty = function(productItem, newQty) {
+orderSchema.methods.setProductQty = function(productProduct, newQty) {
   const cart = this;
-  const lineItem = cart.lineItems.find(lineItem => lineItem.product._id.equals(productItem));
-  if (lineItem && newQty <= 0) {
-    lineItem.remove();
-  } else if (lineItem) {
-    lineItem.qty = newQty;
+  const lineProduct = cart.lineProducts.find(lineProduct => lineProduct.product._id.equals(productProduct));
+  if (lineProduct && newQty <= 0) {
+    lineProduct.remove();
+  } else if (lineProduct) {
+    lineProduct.qty = newQty;
   }
   return cart.save();
 };

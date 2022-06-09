@@ -1,26 +1,56 @@
-.authPage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.AuthPage {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 2vmin;
+    margin-top: 12vh;;
+}
+  
+.AuthPage h3 {
+    margin-top: 4vmin;
+    text-align: center;
+    color: var(--text-light);
+    cursor: pointer;
 }
 
-.auth-img {
-    width: 70vh;
+.auth-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    font-weight: 700;
-    padding-top: 30vmin;
-    font-size: 60px;
+.logo {
+    margin-bottom: 3.8vh;
 }
 
-h3 {
-    font-weight: 600;
-    font-size: 30px;
+.login-btn, .signup-btn {
+    font-size: 1.2vmin;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    width: 7vw;
 }
 
-button {
-    background-color: var(--green);
-    border-radius: 3px;
-    font-size: 20px;
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+    
+.grow:hover { 
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
+.auth-message-1 {
+    font-size: 2.2vmin;
+    font-weight: 350;
+}
+
+.auth-message-2 {
+    font-size: 1.8vmin;
+    font-weight: 450;
+}

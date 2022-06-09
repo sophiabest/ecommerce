@@ -1,0 +1,84 @@
+.LineProduct {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 12vw 12.35vw 5.25vw;
+    padding: 1.3vmin 0;
+    color: var(--black);
+    background-color: var(--white);
+    border-top: .1vmin solid var(--black);
+    font-size: 1.2vw;
+}
+  
+.LineProduct:last-child {
+    border-bottom: .1vmin solid black;
+}
+  
+.LineProduct .qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    margin-left: 3vw;
+}
+  
+.LineProduct .ext-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.3vw;
+}
+  
+.LineProduct button {
+    margin: 0;
+}
+
+#product-name {
+    margin-bottom: .7vh;
+}
+
+div#name-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#qty-plus {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.4vw;
+    margin-left: .3vw;;
+    padding: 0px;
+    margin-right: 3vw;
+}
+
+#qty-minus {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.4vw;
+    margin-right: .3vw;
+    padding: 0px;
+}
+
+#qty-plus:hover {
+    color: green;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+}
+
+#qty-minus:hover {
+    color: red;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.grow {
+    transition: all .1s ease-in-out;
+}
+
+.grow:hover { 
+    transform: scale(1); 
+}

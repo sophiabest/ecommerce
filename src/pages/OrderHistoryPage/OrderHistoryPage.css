@@ -1,5 +1,59 @@
-.order-history {
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OrderHistoryPage {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.6fr 3.5fr 3fr;
+    grid-template-rows: 1fr;
+    background-color: var(--white);
+    border-radius: 2px;
+}
+
+.OrderHistoryPage aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vmin 2vmin;
+}
+
+.title {
+    font-size: 2.3vw;
+    font-weight: 400;
+    margin-top: 4vh;
+    margin-bottom: 2.6vh;
+}
+
+#back-to-shopping {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    font-size: 1.6vw;
+}
+
+#back-to-shopping:hover {
     font-weight: 700;
-    font-size: 60px;  
-    padding: 5vmin;
+}
+
+.order-msg {
+    font-size: 1.6vw;
+    font-weight: 450;
+    margin-top: 8vh;
+    color: rgb(122, 122, 122);
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
 }

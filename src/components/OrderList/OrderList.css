@@ -1,4 +1,4 @@
-.OrderList {
+/* .OrderList {
     display: grid;
     grid-template-columns: repeat(1fr);
     gap: 5vmin;
@@ -13,4 +13,4 @@
     font-size: 2vmin;
     text-align: center;
     top: calc(50vh);
-}
+} */

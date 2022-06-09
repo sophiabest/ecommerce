@@ -3,9 +3,9 @@ const Order = require('../../models/order');
 module.exports = {
   cart,
   addToCart,
-  setItemQtyInCart,
+  setProductQtyInCart,
   checkout,
-  history
+  orders
 };
 
 async function cart(req, res) {
@@ -19,9 +19,9 @@ async function addToCart(req, res) {
   res.json(cart);
 }
 
-async function setItemQtyInCart(req, res) {
+async function setProductQtyInCart(req, res) {
   const cart = await Order.getCart(req.user._id);
-  await cart.setItemQty(req.body.productId, req.body.newQty);
+  await cart.setProductQty(req.body.productId, req.body.newQty);
   res.json(cart);
 }
 
@@ -32,9 +32,7 @@ async function checkout(req, res) {
   res.json(cart);
 }
 
-async function history(req, res) {
-  const orders = await Order
-    .find({ user: req.user._id, isPaid: true })
-    .sort('-updatedAt').exec();
+async function orders(req, res) {
+  const orders = await Order.find({user: req.user._id, isPaid: true}).sort('-updatedAt');
   res.json(orders);
 }

@@ -1,0 +1,12 @@
+.MenuList {
+    background-color: var(--white);
+    margin: 3vmin 0;
+    padding: 3vmin;
+}
+
+.no-products-msg {
+    font-size: 1.6vw;
+    font-weight: 450;
+    margin-top: 8vh;
+    color: rgb(122, 122, 122);
+}

@@ -1,0 +1,37 @@
+.BrandList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--black);
+    list-style: none;
+    padding: 0;
+    font-size: 1.4vw;
+}
+  
+.BrandList li {
+    font-size: 1.3vw;
+    padding: .6vmin;
+    text-align: center;
+    margin: 1vmin;
+}
+      
+.BrandList li:hover:not(.active) {
+    cursor: pointer;
+    background-color: var(--white);
+}
+  
+.BrandList li.active {
+    font-weight: 650;
+    color: var(--black);
+    background-color: var(--white);
+    border-bottom: .1vmin solid black;
+    border-top: .1vmin solid black;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover { 
+  transform: scale(1.1); 
+}
