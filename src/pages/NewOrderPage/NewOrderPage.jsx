@@ -12,10 +12,10 @@ export default function NewOrderPage({ user, setUser }) {
   // initialize to an empty array
   const [menuProducts, setMenuProducts] = useState([]);
   const [activeCat, setActiveCat] = useState('');
-  const [activeBrand, setActiveBrand] = useState('');
+  // const [activeBrand, setActiveBrand] = useState('');
   const [cart, setCart] = useState(null);
   const categoriesRef = useRef([]);
-  const brandsRef = useRef([]);
+  // const brandsRef = useRef([]);
   const navigate = useNavigate();
 
   useEffect(function() {
@@ -24,7 +24,7 @@ export default function NewOrderPage({ user, setUser }) {
       categoriesRef.current = [...new Set(products.map(product => product.category.name))];
       setMenuProducts(products);
       setActiveCat(categoriesRef.current[0]);
-      setActiveBrand(products[0].brand.name);
+      // setActiveBrand(products[0].brand.name);
     }
     getProducts();
     async function getCart() {
