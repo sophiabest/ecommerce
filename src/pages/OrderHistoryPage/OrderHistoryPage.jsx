@@ -11,9 +11,9 @@ function OrderHistoryPage({ user }) {
 
     useEffect(function() {
         async function getOrders() {
-          const orders = await ordersAPI.getOrders();
+          const orders = await ordersAPI.getAllForUser();
           setOrderProducts(orders);
-          setActiveOrder(orders[orders.length - 1]);
+          setActiveOrder(orders[0]);
         }
         getOrders();
       }, []);

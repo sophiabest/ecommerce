@@ -49,7 +49,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
                   </div>
                 }
                 <div className='total-container'>
-                      <span className="right" id='total-label'>TOTAL&nbsp;&nbsp;</span>
+                    <span>{order.totalQty}</span>
                     <span className="right">${order.orderTotal.toFixed(2)}</span>
                     </div>
               </div>
