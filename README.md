@@ -51,10 +51,10 @@ Screenshots
 | Description | Screenshot |
 |------------ | ------------|
 | <h3 align="center">Home Page</h3> | <img width="2240" alt="Screen Shot 2022-06-10 at 4 46 30 PM" src="https://user-images.githubusercontent.com/101842750/173147787-ba6b9f6a-edba-43a8-b916-f11ee10d3012.png"> |
-| <h3 align="center">Sign up Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 9 59 54 AM" src="https://user-images.githubusercontent.com/101842750/169544304-c9fc9ac1-456a-4606-95a8-27f5c049ebc6.png"> |
-| <h3 align="center">Create Profile Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 02 16 AM" src="https://user-images.githubusercontent.com/101842750/169544540-e66e0d23-dee1-4649-90d4-9efe4c83461d.png"> |
-| <h3 align="center">Profile Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 00 47 AM" src="https://user-images.githubusercontent.com/101842750/169544569-33e8b6d0-b85c-4fae-9635-7ea77edb823e.png"> |
-| <h3 align="center">Potential Matches</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 00 24 AM" src="https://user-images.githubusercontent.com/101842750/169544622-cc21845a-3087-43bd-89c8-1d22bd314de6.png"> |
+| <h3 align="center">Sign up Page</h3> |  |
+| <h3 align="center">Create Profile Page</h3> |  |
+| <h3 align="center">Order History</h3> | <img width="2237" alt="Screen Shot 2022-06-10 at 4 50 07 PM" src="https://user-images.githubusercontent.com/101842750/173148208-4f168b98-aa7f-4941-9640-2b49b3a98390.png"> |
+ |
 </details>
    
 
@@ -70,10 +70,7 @@ Screenshots
 ![Git](https://img.shields.io/badge/-Git-333?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
-![Python](https://img.shields.io/badge/-Python-333?style=flat&logo=python)
-![Django](https://img.shields.io/badge/-Django-333?style=flat&logo=django)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-333?style=flat&logo=postgresql)
-![Materialize CSS](https://img.shields.io/badge/-Materialize_CSS-333?style=flat&logo=materialdesign) 
+
 
 
 <h2> :atom_symbol: Getting Started </h2>
@@ -93,7 +90,7 @@ Screenshots
 
 <details>
 <h3> :link: Links </h3>
-<summary>Trello Board and Pitch Deck</summary>   
+<summary>Trello Board</summary>   
 <a href="https://trello.com/b/TYD1kWFw/ecommerce">https://trello.com/b/TYD1kWFw/ecommerce</a>      
 </details>
 
