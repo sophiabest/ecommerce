@@ -51,10 +51,11 @@ Screenshots
 | Description | Screenshot |
 |------------ | ------------|
 | <h3 align="center">Home Page</h3> | <img width="2240" alt="Screen Shot 2022-06-10 at 4 46 30 PM" src="https://user-images.githubusercontent.com/101842750/173147787-ba6b9f6a-edba-43a8-b916-f11ee10d3012.png"> |
-| <h3 align="center">Sign up Page</h3> |  |
-| <h3 align="center">Create Profile Page</h3> |  |
+| <h3 align="center">Main Page after Logging In</h3> | <img width="2237" alt="Screen Shot 2022-06-10 at 7 11 09 PM" src="https://user-images.githubusercontent.com/101842750/173161338-26c21f94-112c-44b7-9fee-806536713eb5.png"> |
+| <h3 align="center">Detail Page of a Product</h3> | <img width="2237" alt="Screen Shot 2022-06-10 at 7 12 17 PM" src="https://user-images.githubusercontent.com/101842750/173161406-f5a3b107-ccc1-4b4a-be59-b9d96331c537.png">|
+| <h3 align="center">Shopping Cart</h3> | <img width="2237" alt="Screen Shot 2022-06-10 at 7 13 39 PM" src="https://user-images.githubusercontent.com/101842750/173161480-cdfa04bd-b8b1-48fb-abb0-2b1ddc03a37e.png">|
 | <h3 align="center">Order History</h3> | <img width="2237" alt="Screen Shot 2022-06-10 at 4 50 07 PM" src="https://user-images.githubusercontent.com/101842750/173148208-4f168b98-aa7f-4941-9640-2b49b3a98390.png"> |
- |
+ 
 </details>
    
 
