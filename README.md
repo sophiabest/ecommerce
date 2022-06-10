@@ -32,7 +32,7 @@ Screenshots
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">ERD</h3> | <img width="1018" alt="Screen Shot 2022-05-19 at 12 43 51 PM" src="https://user-images.githubusercontent.com/101842750/169353909-622dcbdf-2561-43a6-a8b5-2275c27550b5.png">
+| <h3 align="center">ERD</h3> | <img width="790" alt="Screen Shot 2022-06-10 at 4 44 48 PM" src="https://user-images.githubusercontent.com/101842750/173147549-9e0ea1a4-2925-43ea-b669-d2c8a67ac184.png">
  |
 </details>
 
@@ -41,7 +41,7 @@ Screenshots
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Home Page</h3> | <img width="1018" alt="Screen Shot 2022-05-19 at 12 43 38 PM" src="https://user-images.githubusercontent.com/101842750/169354033-ea475889-b5d1-41c1-864a-ddfbf20cf9c9.png">
+| <h3 align="center">Product Page</h3> | <img width="558" alt="Screen Shot 2022-06-02 at 12 27 21 PM" src="https://user-images.githubusercontent.com/101842750/173147284-09f335cd-8383-4ddb-91d2-f49f9ae7d48f.png">
 | 
 </details>
 
@@ -50,7 +50,7 @@ Screenshots
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Home Page</h3> | <img width="2240" alt="Screen Shot 2022-05-19 at 12 47 10 PM" src="https://user-images.githubusercontent.com/101842750/169354692-f3c54938-83f6-4d35-90ec-2bd3ff45b22e.png"> |
+| <h3 align="center">Home Page</h3> | <img width="2240" alt="Screen Shot 2022-06-10 at 4 46 30 PM" src="https://user-images.githubusercontent.com/101842750/173147787-ba6b9f6a-edba-43a8-b916-f11ee10d3012.png"> |
 | <h3 align="center">Sign up Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 9 59 54 AM" src="https://user-images.githubusercontent.com/101842750/169544304-c9fc9ac1-456a-4606-95a8-27f5c049ebc6.png"> |
 | <h3 align="center">Create Profile Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 02 16 AM" src="https://user-images.githubusercontent.com/101842750/169544540-e66e0d23-dee1-4649-90d4-9efe4c83461d.png"> |
 | <h3 align="center">Profile Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 00 47 AM" src="https://user-images.githubusercontent.com/101842750/169544569-33e8b6d0-b85c-4fae-9635-7ea77edb823e.png"> |
