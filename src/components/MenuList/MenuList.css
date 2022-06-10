@@ -1,4 +1,5 @@
 .MenuList {
+    grid-row: span 2;
     background-color: var(--white);
     margin: 3vmin 0;
     padding: 3vmin;
