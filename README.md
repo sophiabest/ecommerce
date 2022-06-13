@@ -117,3 +117,5 @@ Screenshots
 
 - [ ] Add ability to like/favorite products 
 
+- [ ] Add different size options that are clickable 
+
